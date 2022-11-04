@@ -20,7 +20,7 @@ function App() {
           <div className="counter">
             <button className="counter-btn decrement-button" onClick={()=>{
 
-              parseInt(value) === 0? setError("Error subtracting number"): action({type: "subtract"});
+              parseInt(value) === 0? setError("404 error"): action({type: "subtract"});
               
               
               
@@ -43,7 +43,9 @@ function App() {
               
               action({type: "add"})
               
-              }}>+</button>
+              }}
+              
+              >+</button>
           </div>
 
           <div className="counter-actions">
