@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button{
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
 
-.App-link {
-  color: #61dafb;
+
+button:hover{
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    transition: 0.5s ease all;
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.counter-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.counter-container .err{
+    width: 250px;
+    background: rgba(255, 10, 0, .9);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+    text-align: center;
+    
+}
+
+.counter-container .counter{
+    display: flex;
+    height: 40px;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+
+}
+
+.counter-container .counter .counter-btn{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 255, .2);
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .1); */
+}
+
+.counter-container .counter .counter-value{
+    width: calc(100% - 160px);
+    height: 100%;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, .3);
+}
+
+.counter-actions{
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.counter-actions .counter-action-btn{
+    width: 100%;
+    height: 100%;
+
+}
+
+.counter-actions .reset-btn{
+    background: rgba(0, 0, 255, .9);
+    color: white;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 255, .9);
+}
+
+.counter-actions .reset-btn:hover{
+        box-shadow: inset 0px 0px 10px 0px rgba(255, 255, 255, .5);
 }
